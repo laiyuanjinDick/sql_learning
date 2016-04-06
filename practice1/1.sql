@@ -5,31 +5,20 @@ SELECT * FROM Course;
 
 --2.查询成绩在70到80分之间的学生的学号、课程号和成绩。
 SELECT SNO,CNO,GRADE FROM Student,SC
-where Grade between 70 and 80;
+WHERE GRADE BETWEEN 70 AND 80;
 
 --3．查询C01号课程成绩最高的分数
-SELECT MAX(Grade)
+SELECT MAX(GRADE)
 FROM SC
-where Cno = 'C01';
+WHERE Cno = 'C01';
 
 --4.查询学生都选修了哪些课程,要求列出课程号。
-
-
---5.查询Northwind数据库中orders表的OrderID、CustomerID和OrderDate,
---并将最新的定购日期(OrderDate)列在前边。
-
-
-
---6.查询Northwind数据库中orders表的ShipCountry列以B,C,D,F --//ShipCountry BCDF
---开始且第三个字符为"a"的OrderID、CustomerID和ShipCountry的信息。//OrderID、CustomerID第三个字符为"a"
-
-
---7.查询Northwind数据库中orders表的ShipCountry列不以A,B,C,D,E,F开始且最后一个字
---母是"a"的OrderID、CustomerID和ShipCountry的信息。
-
+SELECT CNAME,CNO FROM Course;
 
 --8.查询修了C02号课程的所有学生的平均成绩、最高成绩和最低成绩。
-
+SELECT AVG(GRADE),MAX(GRADE),MIN(GRADE)
+FROM SC
+WHERE CNO='C02';
 
 --9.统计每个系的学生人数。
 
